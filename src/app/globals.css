@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+.google-translate-hidden {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-banner-frame,
+#google_translate_element .skiptranslate {
+  display: none !important;
+}
+
 :root {
   --font-serif: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-manrope), "Manrope", system-ui, sans-serif;

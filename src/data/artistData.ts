@@ -21,7 +21,7 @@ export const artistProfile: ArtistProfile = {
   bioFull: [
     'Cristina Casado is a Singer-Songwriter who began her music education when she was 8 years old. Since then, she has been studying Piano, Guitar, and Voice and experimenting with different musical sounds in order to find the sound that resonated more with who she was, as well as her life experiences. In the music world, there’s no standing still. You must constantly strive to evolve and tour with the purpose of offering something unique to devoted fans and followers. Cristina tries to find inspiration wherever she looks and channel whatever moves her into her music.',
     'The story of Cristina Casado is rooted in the Dominican Republic music scene and inspired by Anglo-Saxon Pop Music. A lover of Broadway musicals and Lin-Manuel Miranda, she draws artistic inspiration from international icons ranging from modern artists like Harry Styles, Taylor Swift, and Billie Eilish to legendary classics like Queen, Billy Joel, The Beatles, and The Cranberries. These influences merge with her heartfelt perspective, reflected in self-penned songs including "Without You", "Lilac", "Reliquia", "Oxymoron", "Fool For You", "Writing On A Wall", and "Don\'t Ask Don\'t Tell".',
-    'Now, Cristina Casado is continuing her career in the Music Industry simultaneously with her career in Neuroscience, aiming to inspire others to follow their dreams no matter how far they may seem. Collaborating with Dare (Digital Arts Rep) Management in Miami and Grammy-nominated producer Dani Crazy Town, she is actively expanding her musical showcase to embrace rich Latin sounds, live showcases, and her highly anticipated debut EP.',
+    'Now, Cristina Casado is continuing her career in the Music Industry simultaneously with her career in Neuroscience, aiming to inspire others to follow their dreams no matter how far they may seem. Collaborating with Grammy-nominated producer Dani Crazy Town, she is actively expanding her musical showcase to embrace rich Latin sounds, live showcases, and her highly anticipated debut EP.',
   ],
   // Authentic master photographs from cristinacasadomusic.com
   heroImage:
@@ -40,19 +40,21 @@ export const artistProfile: ArtistProfile = {
   yearsActive: '2020 – Present',
   socialLinks: {
     spotify: 'https://open.spotify.com/artist/7IsJkcT7O5Abliw6W27UL5',
-    appleMusic: 'https://music.apple.com/artist/cristina-casado/1564757304',
+    appleMusic: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
+    amazonMusic: 'https://music.amazon.com/search/cristina%20casado',
     youtube: 'https://www.youtube.com/@cristinacasadomusic',
-    instagram: 'https://www.instagram.com/cristinacasadomusic',
-    tiktok: 'https://www.tiktok.com/@cristinacasadomusic',
-    twitter: 'https://x.com/cristinacasado',
-    facebook: 'https://www.facebook.com/cristinacasadomusic',
+    instagram: 'https://www.instagram.com/cristinaccasado',
+    tiktok: 'https://www.tiktok.com/@cristinaccasado',
+    twitter: 'https://x.com/cristinaccasado',
+    facebook: 'https://www.facebook.com/cristina.casado.90',
+    threads: 'https://www.threads.net/@cristinaccasado',
   },
   management: {
     generalEmail: 'cristinacasadomusic@gmail.com',
     bookingEmail: 'cristinacasadomusic@gmail.com',
     pressEmail: 'cristinacasadomusic@gmail.com',
     phone: 'Direct Management Inquiries via Email',
-    location: 'Punta Cana, Dominican Republic & Dare Management, Miami, FL',
+    location: 'Punta Cana, Dominican Republic & Miami, FL',
   },
 };
 
@@ -84,20 +86,6 @@ export const pressCritiquesData: PressCritique[] = [
 
 export const blogPostsData: BlogPost[] = [
   {
-    id: 'post-1',
-    title:
-      "Cristina's New Collaboration with Dare Management in Miami and the Anticipation of New Projects",
-    date: 'December 22, 2024',
-    readTime: '4 min read',
-    slug: 'dare-management-collaboration',
-    excerpt:
-      'With the recent partnership with Dare (Digital Arts Rep) Management in Miami, excitement is growing for fresh projects, like the highly awaited single "Oxymoron" produced with Grammy Nominee Dani Crazy Town.',
-    content:
-      'The music industry is always changing, filled with new beginnings and exciting collaborations that help artists reach new heights. With the recent partnership with Dare (Digital Arts Rep) Management, excitement is growing for fresh projects, like the highly awaited single "Oxymoron." Collaboration is crucial in making music that resonates with audiences. This new chapter not only represents a personal milestone for Cristina but also signifies a time of alignment with a management team known for nurturing talent and creating pathways to success. The production process, in collaboration with Dare and Grammy Nominee producer Dani Crazy Town, emphasizes capturing Cristina’s essence while reaching a wider audience.',
-    externalUrl:
-      'https://www.cristinacasadomusic.com/post/unveiling-the-journey-cristina-s-new-collaboration-with-dare-management-in-miami-and-the-anticipati',
-  },
-  {
     id: 'post-2',
     title: "Unveiling Cristina Casado's Unique Musical Journey",
     date: 'January 14, 2024',
@@ -126,24 +114,12 @@ export const blogPostsData: BlogPost[] = [
 ];
 
 export const originalSongsCatalog: string[] = [
-  'Without You',
   'Oxymoron',
   'Reliquia',
   'Lilac',
-  'Writing On A Wall',
-  'Fool For You',
+  'Pausa',
+  'Me Perdiste',
   "Don't Ask Don't Tell",
-  'Only Fifteen',
-  'Tears of Love',
-  'Love Again',
-  'Better Place',
-  'Sofia',
-  'Art Gallery',
-  'Unsaid',
-  'Headfirst',
-  'Heart Race (Hope U Burn)',
-  'Grams of Happiness',
-  'Winepong Nights',
 ];
 
 export const albumsData: Album[] = [
@@ -159,9 +135,9 @@ export const albumsData: Album[] = [
     bannerImage:
       '/assets/hero-piano.jpg',
     description:
-      'A bold pop single from Cristina Casado exploring emotional contradictions and relationship dynamics. Produced in Miami with Grammy-nominated producer Dani Crazy Town and Dare Management.',
+      'A bold pop single from Cristina Casado exploring emotional contradictions and relationship dynamics. Produced in Miami with Grammy-nominated producer Dani Crazy Town.',
     spotifyUrl: 'https://open.spotify.com/album/35cZcDo6ybsC1b7a7QyXkh',
-    appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
+    appleMusicUrl: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
     youtubeUrl: 'https://www.youtube.com/watch?v=U9R1tncQqCc',
     featured: true,
     tracks: [
@@ -170,15 +146,14 @@ export const albumsData: Album[] = [
         albumId: 'single-1',
         trackNumber: 1,
         title: 'Oxymoron',
-        duration: '2:49',
+        duration: '2:48',
         durationSeconds: 169,
-        previewAudioUrl:
-          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+        previewAudioUrl: '/audio/oxymoron.wav',
         spotifyUrl: 'https://open.spotify.com/album/35cZcDo6ybsC1b7a7QyXkh',
         appleMusicUrl:
-          'https://music.apple.com/artist/cristina-casado/1564757304',
+          'https://music.apple.com/us/artist/cristina-casado/1565226271',
         youtubeUrl: 'https://www.youtube.com/watch?v=U9R1tncQqCc',
-        producer: 'Dani Crazy Town (Grammy Nominee) & Dare Management',
+        producer: 'Dani Crazy Town (Grammy Nominee)',
         lyricsExcerpt:
           'You are a walking oxymoron, whispering silence in the storm. You say you love me while pulling away...',
       },
@@ -198,7 +173,7 @@ export const albumsData: Album[] = [
     description:
       'An intimate, timeless ballad celebrating sacred connection and emotional depth. Featuring bilingual lyricism and delicate acoustic instrumentation.',
     spotifyUrl: 'https://open.spotify.com/album/4gFidBRqhl9AvhUZkqW7P7',
-    appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
+    appleMusicUrl: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
     youtubeUrl: 'https://www.youtube.com/watch?v=Uz_Tc-yCCSk',
     featured: true,
     tracks: [
@@ -207,13 +182,12 @@ export const albumsData: Album[] = [
         albumId: 'single-2',
         trackNumber: 1,
         title: 'Reliquia',
-        duration: '3:34',
+        duration: '2:49',
         durationSeconds: 214,
-        previewAudioUrl:
-          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+        previewAudioUrl: '/audio/reliquia.wav',
         spotifyUrl: 'https://open.spotify.com/album/4gFidBRqhl9AvhUZkqW7P7',
         appleMusicUrl:
-          'https://music.apple.com/artist/cristina-casado/1564757304',
+          'https://music.apple.com/us/artist/cristina-casado/1565226271',
         youtubeUrl: 'https://www.youtube.com/watch?v=Uz_Tc-yCCSk',
         producer: 'Dani Crazy Town & Cristina Casado',
         lyricsExcerpt:
@@ -235,7 +209,7 @@ export const albumsData: Album[] = [
     description:
       'The latest release and official Spotify artist pick. An anthem of self-worth and independence navigating emotional growth with catchy Latin pop grooves.',
     spotifyUrl: 'https://open.spotify.com/album/0Vlzwi5cUuWOZI3HLrOrKN',
-    appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
+    appleMusicUrl: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
     youtubeUrl: 'https://www.youtube.com/watch?v=JdyD-vz9wE4',
     featured: true,
     tracks: [
@@ -244,15 +218,14 @@ export const albumsData: Album[] = [
         albumId: 'single-3',
         trackNumber: 1,
         title: 'Me Perdiste',
-        duration: '3:05',
+        duration: '2:56',
         durationSeconds: 185,
-        previewAudioUrl:
-          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3',
+        previewAudioUrl: '/audio/me-perdiste.wav',
         spotifyUrl: 'https://open.spotify.com/album/0Vlzwi5cUuWOZI3HLrOrKN',
         appleMusicUrl:
-          'https://music.apple.com/artist/cristina-casado/1564757304',
+          'https://music.apple.com/us/artist/cristina-casado/1565226271',
         youtubeUrl: 'https://www.youtube.com/watch?v=JdyD-vz9wE4',
-        producer: 'Cristina Casado & Dare Management',
+        producer: 'Cristina Casado',
         lyricsExcerpt:
           'Tú perdiste porque me perdiste a mí. No voy a mirar atrás cuando el futuro brilla tan claro...',
       },
@@ -272,7 +245,7 @@ export const albumsData: Album[] = [
     description:
       'A serene acoustic-pop reflection on breathing space, self-care, and finding calm amidst the world’s noise.',
     spotifyUrl: 'https://open.spotify.com/album/0JvjiSXNvrOJbwtdi9vsw0',
-    appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
+    appleMusicUrl: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
     youtubeUrl: 'https://www.youtube.com/watch?v=mid_2H450FY',
     featured: true,
     tracks: [
@@ -281,13 +254,12 @@ export const albumsData: Album[] = [
         albumId: 'single-4',
         trackNumber: 1,
         title: 'Pausa',
-        duration: '3:12',
+        duration: '3:23',
         durationSeconds: 192,
-        previewAudioUrl:
-          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3',
+        previewAudioUrl: '/audio/pausa.wav',
         spotifyUrl: 'https://open.spotify.com/album/0JvjiSXNvrOJbwtdi9vsw0',
         appleMusicUrl:
-          'https://music.apple.com/artist/cristina-casado/1564757304',
+          'https://music.apple.com/us/artist/cristina-casado/1565226271',
         youtubeUrl: 'https://www.youtube.com/watch?v=mid_2H450FY',
         producer: 'Cristina Casado & Production Team',
         lyricsExcerpt:
@@ -309,7 +281,7 @@ export const albumsData: Album[] = [
     description:
       'A tender exploration of youth, innocence, and delicate melody layered over grand piano and rich vocal textures.',
     spotifyUrl: 'https://open.spotify.com/album/2AXxklrBVPh5BnsKyDJ515',
-    appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
+    appleMusicUrl: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
     youtubeUrl: 'https://www.youtube.com/watch?v=EsveAXhwtXY',
     featured: false,
     tracks: [
@@ -318,15 +290,14 @@ export const albumsData: Album[] = [
         albumId: 'single-5',
         trackNumber: 1,
         title: 'Lilac',
-        duration: '3:19',
+        duration: '3:24',
         durationSeconds: 199,
-        previewAudioUrl:
-          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3',
+        previewAudioUrl: '/audio/lilac.wav',
         spotifyUrl: 'https://open.spotify.com/album/2AXxklrBVPh5BnsKyDJ515',
         appleMusicUrl:
-          'https://music.apple.com/artist/cristina-casado/1564757304',
+          'https://music.apple.com/us/artist/cristina-casado/1565226271',
         youtubeUrl: 'https://www.youtube.com/watch?v=EsveAXhwtXY',
-        producer: 'Cristina Casado & Dare Management',
+        producer: 'Cristina Casado',
         lyricsExcerpt:
           'Under the lilac sky, innocent and young. A sweet first chapter in a song left unsung...',
       },
@@ -346,7 +317,7 @@ export const albumsData: Album[] = [
     description:
       'An introspective single navigating boundaries, unspoken truths, and magnetic attraction with acoustic pop sensibilities.',
     spotifyUrl: 'https://open.spotify.com/album/6WBJBDOc61RpctXEh6WAaQ',
-    appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
+    appleMusicUrl: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
     youtubeUrl: 'https://www.youtube.com/watch?v=Ykzg9-2kCO8',
     featured: false,
     tracks: [
@@ -355,54 +326,16 @@ export const albumsData: Album[] = [
         albumId: 'single-6',
         trackNumber: 1,
         title: "Don't Ask Don't Tell",
-        duration: '3:41',
+        duration: '3:24',
         durationSeconds: 221,
-        previewAudioUrl:
-          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3',
+        previewAudioUrl: '/audio/dont-ask-dont-tell.wav',
         spotifyUrl: 'https://open.spotify.com/album/6WBJBDOc61RpctXEh6WAaQ',
         appleMusicUrl:
-          'https://music.apple.com/artist/cristina-casado/1564757304',
+          'https://music.apple.com/us/artist/cristina-casado/1565226271',
         youtubeUrl: 'https://www.youtube.com/watch?v=Ykzg9-2kCO8',
-        producer: 'Dare Management Team',
+        producer: 'Cristina Casado & Production Team',
         lyricsExcerpt:
           'Some things are better left unspoken in the quiet of the night...',
-      },
-    ],
-  },
-  {
-    id: 'single-7',
-    slug: 'without-you-single',
-    title: 'WITHOUT YOU (THE DEBUT)',
-    type: 'SINGLE',
-    releaseDate: 'April 30, 2021',
-    releaseYear: '2021',
-    coverImage:
-      '/assets/cover-without-you.jpg',
-    bannerImage:
-      '/assets/acoustic-shoot.jpg',
-    description:
-      'Cristina Casado’s breakout debut single produced by renowned Dominican producer Álvaro Dinzey. A delicate, heart-rending piano pop ballad that first introduced her voice and songwriting to the public in 2021.',
-    spotifyUrl: 'https://open.spotify.com/album/2BbaGlpvPRQIl78AfIfFjT',
-    appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
-    youtubeUrl: 'https://www.youtube.com/@cristinacasadomusic',
-    featured: true,
-    tracks: [
-      {
-        id: 't-201',
-        albumId: 'single-7',
-        trackNumber: 1,
-        title: 'Without You',
-        duration: '3:52',
-        durationSeconds: 232,
-        previewAudioUrl:
-          'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-        spotifyUrl: 'https://open.spotify.com/album/2BbaGlpvPRQIl78AfIfFjT',
-        appleMusicUrl:
-          'https://music.apple.com/artist/cristina-casado/1564757304',
-        youtubeUrl: 'https://www.youtube.com/@cristinacasadomusic',
-        producer: 'Álvaro Dinzey',
-        lyricsExcerpt:
-          'Learning to breathe again when you are not around. Standing in the echoes of what we used to be...',
       },
     ],
   },
@@ -413,15 +346,14 @@ export const latestRelease = {
   albumTitle: 'Oxymoron - Single',
   releaseDate: 'October 3, 2025',
   releaseYear: '2025',
-  duration: '2:49',
+  duration: '2:48',
   coverImage:
     '/assets/cover-oxymoron.jpg',
   description:
-    'The compelling pop single from Cristina Casado, produced in collaboration with Dare Management and Grammy Nominee producer Dani Crazy Town. Exploring thought-provoking themes with delicate vocal delivery and contemporary soundscapes.',
-  previewAudioUrl:
-    'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
+    'The compelling pop single from Cristina Casado, produced in collaboration with Grammy Nominee producer Dani Crazy Town. Exploring thought-provoking themes with delicate vocal delivery and contemporary soundscapes.',
+  previewAudioUrl: '/audio/oxymoron.wav',
   spotifyUrl: 'https://open.spotify.com/album/35cZcDo6ybsC1b7a7QyXkh',
-  appleMusicUrl: 'https://music.apple.com/artist/cristina-casado/1564757304',
+  appleMusicUrl: 'https://music.apple.com/us/artist/cristina-casado/1565226271',
   youtubeUrl: 'https://www.youtube.com/watch?v=U9R1tncQqCc',
 };
 
@@ -545,10 +477,10 @@ export const musicVideosData: MusicVideo[] = [
     releaseDate: 'January 15, 2025',
     duration: '4:20',
     thumbnail:
-      '/assets/dare-miami.jpg',
+      '/assets/studio-piano.jpg',
     featured: false,
     description:
-      'Behind the scenes in the studio tracking vocals, developing melodies, and crafting the new sound with Dare Management.',
+      'Behind the scenes in the studio tracking vocals, developing melodies, and crafting Cristina’s new sound.',
   },
 ];
 
@@ -556,21 +488,21 @@ export const tourEventsData: TourEvent[] = [
   {
     id: 'event-1',
     title: 'CREATIVE MONDAY JAM SESSION WITH CRISTINA CASADO',
-    tourName: 'Dare Showcase Sessions',
+    tourName: 'Creative Showcase Sessions',
     date: '2025-11-17T20:00:00Z',
     displayDate: '17 NOV 2025',
     time: '8:00 PM',
-    venue: 'Dare Soundstage & Studios',
+    venue: 'Miami Soundstage & Studios',
     city: 'Miami',
     country: 'United States',
     status: 'UPCOMING',
     eventPhoto:
       '/assets/jam-session.jpg',
     description:
-      'Live jam session and intimate acoustic performance featuring Cristina Casado, presenting original songs and creative jams with Dare Management.',
+      'Live jam session and intimate acoustic performance featuring Cristina Casado, presenting original songs and creative jams.',
     mapsUrl: 'https://maps.google.com/?q=Miami+Florida',
     infoUrl:
-      'https://www.cristinacasadomusic.com/event-details-registration/cristina-casado-x-dare-showcase-in-miami',
+      'https://www.cristinacasadomusic.com/event-details-registration/cristina-casado-showcase-in-miami',
   },
   {
     id: 'event-2',
@@ -579,14 +511,14 @@ export const tourEventsData: TourEvent[] = [
     date: '2025-10-03T00:00:00Z',
     displayDate: '03 OCT 2025',
     time: 'Worldwide Premiere',
-    venue: 'All Streaming Platforms & Dare Studios',
+    venue: 'All Streaming Platforms & Studios',
     city: 'Miami & Global',
     country: 'Worldwide',
     status: 'UPCOMING',
     eventPhoto:
       '/assets/cover-oxymoron.jpg',
     description:
-      'Official release day for the highly awaited single "Oxymoron", produced by Grammy Nominee Dani Crazy Town and Dare Management.',
+      'Official release day for the highly awaited single "Oxymoron", produced by Grammy Nominee Dani Crazy Town.',
     mapsUrl: 'https://maps.google.com/?q=Miami+Florida',
     infoUrl:
       'https://www.cristinacasadomusic.com/event-details-registration/cristina-casado-private-listening-session',
@@ -627,45 +559,45 @@ export const tourEventsData: TourEvent[] = [
       'Worldwide release of the atmospheric single "Lilac", exploring youth, innocence, and delicate melodies.',
     mapsUrl: 'https://maps.google.com/?q=Punta+Cana+Dominican+Republic',
     infoUrl:
-      'https://www.cristinacasadomusic.com/event-details-registration/cristina-casado-x-dare-showcase-in-miami',
+      'https://www.cristinacasadomusic.com/event-details-registration/cristina-casado-showcase-in-miami',
   },
   {
     id: 'event-5',
-    title: "WOMEN WHO DARE WOMEN'S MONTH SHOWCASE",
-    tourName: 'Women Who Dare Series',
+    title: "WOMEN'S MONTH SHOWCASE",
+    tourName: "Women's Month Series",
     date: '2025-03-21T19:00:00Z',
     displayDate: '21 MAR 2025',
     time: '7:00 PM',
-    venue: 'Dare Venue, Miami Beach',
+    venue: 'Miami Beach Venue',
     city: 'Miami',
     country: 'United States',
     status: 'UPCOMING',
     eventPhoto:
-      '/assets/women-who-dare.png',
+      '/assets/acoustic-shoot.jpg',
     description:
-      "Special Women's Month showcase celebrating female creative power with Dare Management, featuring Cristina Casado live.",
+      "Special Women's Month showcase celebrating female creative power, featuring Cristina Casado live.",
     mapsUrl: 'https://maps.google.com/?q=Miami+Beach+Florida',
     infoUrl:
-      'https://www.cristinacasadomusic.com/event-details-registration/women-who-dare',
+      'https://www.cristinacasadomusic.com/event-details-registration/womens-month-showcase',
   },
   {
     id: 'event-6',
-    title: 'CRISTINA CASADO X DARE SHOWCASE',
-    tourName: 'Dare Showcase in Miami',
+    title: 'CRISTINA CASADO SHOWCASE',
+    tourName: 'Showcase in Miami',
     date: '2025-01-23T20:00:00Z',
     displayDate: '23 JAN 2025',
     time: '8:00 PM',
-    venue: 'Dare Soundstage',
+    venue: 'Miami Soundstage',
     city: 'Miami',
     country: 'United States',
     status: 'UPCOMING',
     eventPhoto:
-      '/assets/dare-showcase.jpg',
+      '/assets/jam-session.jpg',
     description:
-      'Exclusive live showcase in Miami announcing the new collaboration with Dare Management and previewing the upcoming EP.',
+      'Exclusive live showcase in Miami previewing the upcoming EP.',
     mapsUrl: 'https://maps.google.com/?q=Miami+Florida',
     infoUrl:
-      'https://www.cristinacasadomusic.com/event-details-registration/cristina-casado-x-dare-showcase-in-miami',
+      'https://www.cristinacasadomusic.com/event-details-registration/cristina-casado-showcase-in-miami',
   },
   {
     id: 'event-7',
@@ -691,8 +623,8 @@ export const tourEventsData: TourEvent[] = [
 export const pastEventsData: TourEvent[] = [
   {
     id: 'past-1',
-    title: 'WOMEN WHO DARE SHOWCASE',
-    tourName: 'Dare Management Showcase',
+    title: "WOMEN'S MONTH SHOWCASE",
+    tourName: "Women's Month Showcase",
     date: '2024-11-07T20:00:00Z',
     displayDate: '07 NOV 2024',
     time: '8:00 PM',
@@ -701,12 +633,12 @@ export const pastEventsData: TourEvent[] = [
     country: 'United States',
     status: 'PAST',
     eventPhoto:
-      '/assets/women-who-dare.png',
+      '/assets/live-stage.jpg',
     description:
-      'Live showcase in Miami highlighting original songs and dynamic stage performances with Dare Management.',
+      'Live showcase in Miami highlighting original songs and dynamic stage performances.',
     mapsUrl: 'https://maps.google.com/?q=Miami+Florida',
     infoUrl:
-      'https://www.cristinacasadomusic.com/event-details-registration/women-who-dare-showcase',
+      'https://www.cristinacasadomusic.com/event-details-registration/womens-month-showcase',
   },
   {
     id: 'past-2',
@@ -808,13 +740,13 @@ export const galleryPhotosData: GalleryPhoto[] = [
   },
   {
     id: 'gal-4',
-    title: 'Dare Management in Miami',
+    title: 'Behind the Scenes in Miami',
     category: 'Behind the Scenes',
     imageUrl:
-      '/assets/dare-miami.jpg',
+      '/assets/studio-piano.jpg',
     aspect: 'tall',
     caption:
-      'In Miami celebrating the official management collaboration with Dare Management.',
+      'Behind the scenes in Miami during an active period of music-making.',
     year: '2024',
     location: 'Miami, FL',
     featured: true,
@@ -842,7 +774,7 @@ export const galleryPhotosData: GalleryPhoto[] = [
     caption:
       'Tracking acoustic guitar and lead vocals in the recording studio.',
     year: '2024',
-    location: 'Dare Studios',
+    location: 'Miami Studios',
     featured: false,
   },
   {
@@ -860,13 +792,13 @@ export const galleryPhotosData: GalleryPhoto[] = [
   },
   {
     id: 'gal-8',
-    title: 'Women Who Dare Showcase',
+    title: "Women's Month Showcase",
     category: 'Live',
     imageUrl:
-      '/assets/women-who-dare.png',
+      '/assets/live-stage.jpg',
     aspect: 'tall',
     caption:
-      'Live showcase art for the Women Who Dare concert series in Miami.',
+      "Live showcase art for the Women's Month concert series in Miami.",
     year: '2025',
     location: 'Miami Beach, FL',
     featured: false,
@@ -929,17 +861,17 @@ export const careerMilestones: CareerMilestone[] = [
   {
     year: '2025',
     title: 'RELIQUIA, OXYMORON & LILAC RELEASES',
-    subtitle: 'Collaboration with Dani Crazy Town & Dare Management',
+    subtitle: 'Collaboration with Dani Crazy Town',
     description:
       'Released key singles "Oxymoron", "Reliquia", and "Lilac", produced in collaboration with Grammy Nominee producer Dani Crazy Town, heralding her first EP.',
     tag: 'NEW ERA',
   },
   {
     year: '2025',
-    title: 'WOMEN WHO DARE SHOWCASES',
+    title: "WOMEN'S MONTH SHOWCASES",
     subtitle: 'Miami Beach Live Showcases',
     description:
-      'Featured at the Women Who Dare showcases in Miami, delivering standout live vocals and connecting with international audiences.',
+      "Featured at Women's Month showcases in Miami, delivering standout live vocals and connecting with international audiences.",
     tag: 'LIVE SHOWCASE',
   },
   {
@@ -977,10 +909,6 @@ export const careerMilestones: CareerMilestone[] = [
 ];
 
 export const notableCollaborators = [
-  {
-    name: 'Dare (Digital Arts Rep) Management',
-    role: 'Artist Representation & Creative Direction (Miami, FL)',
-  },
   {
     name: 'Dani Crazy Town',
     role: 'Grammy Nominee Producer ("Oxymoron", Production, Mix & Master)',

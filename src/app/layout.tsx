@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, Manrope } from 'next/font/google';
 import './globals.css';
 import { MusicPlayerProvider } from '@/context/MusicPlayerContext';
+import { LanguageProvider } from '@/context/LanguageContext';
 import Preloader from '@/components/layout/Preloader';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import MusicPlayerDrawer from '@/components/layout/MusicPlayerDrawer';
 import VideoModal from '@/components/videos/VideoModal';
+import GoogleTranslate from '@/components/layout/GoogleTranslate';
 import { artistProfile } from '@/data/artistData';
 
 const cormorant = Cormorant_Garamond({
@@ -36,7 +38,6 @@ export const metadata: Metadata = {
     'Lilac',
     'Without You',
     'Dominican Pop Artist',
-    'Dare Management',
   ],
   authors: [{ name: 'Cristina Casado Music' }],
   openGraph: {
@@ -77,14 +78,17 @@ export default function RootLayout({
       className={`${cormorant.variable} ${manrope.variable} dark scroll-smooth`}
     >
       <body className="min-h-screen flex flex-col bg-[#080808] text-white selection:bg-[#C9A86C] selection:text-black">
-        <MusicPlayerProvider>
-          <Preloader />
-          <Navbar />
-          <div className="flex-1 w-full">{children}</div>
-          <Footer />
-          <MusicPlayerDrawer />
-          <VideoModal />
-        </MusicPlayerProvider>
+        <LanguageProvider>
+          <MusicPlayerProvider>
+            <GoogleTranslate />
+            <Preloader />
+            <Navbar />
+            <div className="flex-1 w-full">{children}</div>
+            <Footer />
+            <MusicPlayerDrawer />
+            <VideoModal />
+          </MusicPlayerProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

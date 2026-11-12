@@ -17,10 +17,13 @@ interface PlayerTrackState {
 interface MusicPlayerContextType {
   currentTrack: PlayerTrackState | null;
   isPlaying: boolean;
+  currentTime: number;
+  durationSeconds: number;
   isDrawerOpen: boolean;
   activeVideo: MusicVideo | null;
   playTrack: (track: Partial<Track> & { title: string; albumTitle?: string; coverImage?: string }) => void;
   togglePlay: () => void;
+  seekTo: (seconds: number) => void;
   openDrawer: () => void;
   closeDrawer: () => void;
   openVideoModal: (video: MusicVideo) => void;
@@ -40,6 +43,8 @@ export function MusicPlayerProvider({ children }: { children: React.ReactNode })
     appleMusicUrl: latestRelease.appleMusicUrl,
   });
   const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [durationSeconds, setDurationSeconds] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [activeVideo, setActiveVideo] = useState<MusicVideo | null>(null);
 
@@ -48,7 +53,16 @@ export function MusicPlayerProvider({ children }: { children: React.ReactNode })
   useEffect(() => {
     if (typeof window !== 'undefined') {
       audioRef.current = new Audio();
-      audioRef.current.onended = () => setIsPlaying(false);
+      audioRef.current.ontimeupdate = () => {
+        setCurrentTime(audioRef.current?.currentTime || 0);
+      };
+      audioRef.current.onloadedmetadata = () => {
+        setDurationSeconds(audioRef.current?.duration || 0);
+      };
+      audioRef.current.onended = () => {
+        setIsPlaying(false);
+        setCurrentTime(0);
+      };
     }
     return () => {
       if (audioRef.current) {
@@ -71,6 +85,8 @@ export function MusicPlayerProvider({ children }: { children: React.ReactNode })
 
     setCurrentTrack(trackPayload);
     setIsDrawerOpen(true);
+    setCurrentTime(0);
+    setDurationSeconds(track.durationSeconds || 0);
 
     if (audioRef.current && trackPayload.audioUrl) {
       audioRef.current.src = trackPayload.audioUrl;
@@ -84,6 +100,25 @@ export function MusicPlayerProvider({ children }: { children: React.ReactNode })
     } else {
       setIsPlaying(true);
     }
+  };
+
+  const seekTo = (seconds: number) => {
+    if (!audioRef.current || !currentTrack?.audioUrl) return;
+
+    if (!audioRef.current.src) {
+      audioRef.current.src = currentTrack.audioUrl;
+    }
+
+    const nextTime = Math.max(
+      0,
+      Math.min(seconds, audioRef.current.duration || durationSeconds || seconds)
+    );
+    audioRef.current.currentTime = nextTime;
+    setCurrentTime(nextTime);
+    audioRef.current
+      .play()
+      .then(() => setIsPlaying(true))
+      .catch(() => setIsPlaying(true));
   };
 
   const togglePlay = () => {
@@ -121,10 +156,13 @@ export function MusicPlayerProvider({ children }: { children: React.ReactNode })
       value={{
         currentTrack,
         isPlaying,
+        currentTime,
+        durationSeconds,
         isDrawerOpen,
         activeVideo,
         playTrack,
         togglePlay,
+        seekTo,
         openDrawer,
         closeDrawer,
         openVideoModal,

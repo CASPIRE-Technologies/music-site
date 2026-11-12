@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -18,10 +18,29 @@ import { useMusicPlayer } from '@/context/MusicPlayerContext';
 import { cn } from '@/lib/utils';
 
 export default function MusicPlayerDrawer() {
-  const { currentTrack, isPlaying, isDrawerOpen, togglePlay, openDrawer, closeDrawer } =
+  const {
+    currentTrack,
+    isPlaying,
+    currentTime,
+    durationSeconds,
+    isDrawerOpen,
+    togglePlay,
+    seekTo,
+    openDrawer,
+    closeDrawer,
+  } =
     useMusicPlayer();
   const [isMuted, setIsMuted] = useState(false);
-  const [progress, setProgress] = useState(38);
+
+  const formatTime = (seconds: number) => {
+    const safeSeconds = Math.max(0, Math.floor(seconds || 0));
+    return `${Math.floor(safeSeconds / 60)}:${String(safeSeconds % 60).padStart(2, '0')}`;
+  };
+
+  const progress = useMemo(
+    () => (durationSeconds > 0 ? Math.min(100, (currentTime / durationSeconds) * 100) : 0),
+    [currentTime, durationSeconds]
+  );
 
   if (!currentTrack) return null;
 
@@ -185,7 +204,19 @@ export default function MusicPlayerDrawer() {
                       0,
                       Math.min(100, (clickX / rect.width) * 100)
                     );
-                    setProgress(newProgress);
+                    seekTo((newProgress / 100) * durationSeconds);
+                  }}
+                  role="slider"
+                  aria-label="Seek through track"
+                  aria-valuemin={0}
+                  aria-valuemax={durationSeconds}
+                  aria-valuenow={currentTime}
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                      e.preventDefault();
+                      seekTo(currentTime + (e.key === 'ArrowRight' ? 5 : -5));
+                    }
                   }}
                 >
                   <div
@@ -196,8 +227,10 @@ export default function MusicPlayerDrawer() {
                   </div>
                 </div>
                 <div className="flex justify-between text-[10px] font-mono text-zinc-500 mt-2">
-                  <span>1:28</span>
-                  <span>{currentTrack.duration}</span>
+                  <span>{formatTime(currentTime)}</span>
+                  <span>
+                    {durationSeconds > 0 ? formatTime(durationSeconds) : currentTrack.duration}
+                  </span>
                 </div>
               </div>
 

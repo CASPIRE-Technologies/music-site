@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'motion/react';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface PageHeaderProps {
   badge: string;
@@ -16,6 +17,8 @@ export default function PageHeader({
   subtitle,
   align = 'center',
 }: PageHeaderProps) {
+  const { t } = useLanguage();
+
   return (
     <div className="relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden border-b border-white/5">
       {/* Background ambient light */}
@@ -33,7 +36,7 @@ export default function PageHeader({
             transition={{ duration: 0.5 }}
             className="text-[11px] uppercase tracking-[0.35em] text-[#C9A86C] font-mono mb-3 inline-block"
           >
-            {badge}
+            {t(badge)}
           </motion.span>
 
           <motion.h1
@@ -42,7 +45,7 @@ export default function PageHeader({
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-serif text-4xl sm:text-5xl md:text-7xl font-light tracking-[0.08em] uppercase text-white mb-4"
           >
-            {title}
+            {t(title)}
           </motion.h1>
 
           {subtitle && (
@@ -52,7 +55,7 @@ export default function PageHeader({
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-zinc-400 text-sm md:text-base max-w-2xl font-light leading-relaxed"
             >
-              {subtitle}
+              {t(subtitle)}
             </motion.p>
           )}
 

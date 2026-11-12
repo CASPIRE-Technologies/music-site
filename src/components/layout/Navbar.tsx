@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import { Play, Pause, Volume2, Menu, X, Music2 } from 'lucide-react';
 import { useMusicPlayer } from '@/context/MusicPlayerContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -23,6 +24,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const { currentTrack, isPlaying, togglePlay, openDrawer } = useMusicPlayer();
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +56,16 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Logo / Artist Name */}
+          <button
+            onClick={toggleLanguage}
+            aria-label="Change language"
+            className="hidden lg:inline-flex self-center relative -left-4 items-center gap-1.5 rounded-full border border-white/15 px-3 py-2 text-[10px] font-semibold tracking-[0.18em] text-zinc-300 hover:border-[#C9A86C] hover:text-[#C9A86C] transition-colors"
+          >
+            <span className={language === 'en' ? 'text-[#C9A86C]' : ''}>EN</span>
+            <span className="text-zinc-600">/</span>
+            <span className={language === 'es' ? 'text-[#C9A86C]' : ''}>ES</span>
+          </button>
+
           <Link
             href="/"
             className="group flex flex-col items-start focus:outline-none"
@@ -81,7 +93,7 @@ export default function Navbar() {
                       : 'text-zinc-300 hover:text-white'
                   )}
                 >
-                  {item.name}
+                  {t(item.name)}
                   {isActive && (
                     <motion.div
                       layoutId="activeNavIndicator"
@@ -105,7 +117,7 @@ export default function Navbar() {
                   openDrawer();
                 }
               }}
-              className="group relative flex items-center space-x-2.5 px-5 py-2.5 rounded-full border border-[#C9A86C]/40 bg-[#121212]/80 hover:bg-[#C9A86C] text-white hover:text-black transition-all duration-300 shadow-lg shadow-black/40 hover:shadow-[#C9A86C]/20 hover:scale-[1.02] active:scale-[0.98]"
+              className="group relative left-4 self-center shrink-0 whitespace-nowrap flex items-center space-x-2.5 px-5 py-2.5 rounded-full border border-[#C9A86C]/40 bg-[#121212]/80 hover:bg-[#C9A86C] text-white hover:text-black transition-all duration-300 shadow-lg shadow-black/40 hover:shadow-[#C9A86C]/20 hover:scale-[1.02] active:scale-[0.98]"
             >
               <span className="relative flex h-2 w-2">
                 {isPlaying && (
@@ -120,7 +132,7 @@ export default function Navbar() {
               </span>
 
               <span className="text-xs uppercase tracking-[0.18em] font-semibold">
-                {isPlaying ? 'NOW PLAYING' : 'LISTEN NOW'}
+                {isPlaying ? t('NOW PLAYING') : t('LISTEN NOW')}
               </span>
 
               {isPlaying ? (
@@ -175,7 +187,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col space-y-6">
               <span className="text-[10px] uppercase tracking-[0.3em] text-[#C9A86C] font-mono">
-                Navigation Menu
+                {t('Navigation Menu')}
               </span>
               {navLinks.map((item, idx) => {
                 const isActive = pathname === item.href;
@@ -196,7 +208,7 @@ export default function Navbar() {
                           : 'text-zinc-300 hover:text-white'
                       )}
                     >
-                      {item.name}
+                      {t(item.name)}
                     </Link>
                   </motion.div>
                 );
@@ -213,7 +225,7 @@ export default function Navbar() {
                 className="w-full flex items-center justify-center space-x-3 py-3.5 rounded-full bg-[#C9A86C] text-black font-semibold text-xs uppercase tracking-[0.2em] shadow-lg"
               >
                 <Music2 className="w-4 h-4" />
-                <span>{isPlaying ? 'OPEN AUDIO DRAWER' : 'PLAY LATEST SINGLE'}</span>
+                <span>{isPlaying ? t('OPEN AUDIO DRAWER') : t('PLAY LATEST SINGLE')}</span>
               </button>
 
               <div className="flex justify-center space-x-6 pt-2 text-zinc-400 text-xs tracking-wider">
@@ -244,6 +256,13 @@ export default function Navbar() {
                   YOUTUBE
                 </a>
               </div>
+
+              <button
+                onClick={toggleLanguage}
+                className="self-center rounded-full border border-white/15 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-zinc-300"
+              >
+                {language === 'en' ? 'ESPAÑOL' : 'ENGLISH'}
+              </button>
             </div>
           </motion.div>
         )}

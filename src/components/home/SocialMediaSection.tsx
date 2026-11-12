@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { AtSign, ExternalLink, Music2 } from 'lucide-react';
 import {
   SpotifyIcon,
   AppleMusicIcon,
@@ -30,8 +30,16 @@ const socialChannels = [
     color: 'hover:border-[#fc3c44] hover:text-[#fc3c44]',
   },
   {
+    name: 'Amazon Music',
+    handle: 'Cristina Casado',
+    followers: 'Music & Releases',
+    url: artistProfile.socialLinks.amazonMusic,
+    icon: Music2,
+    color: 'hover:border-[#25d1da] hover:text-[#25d1da]',
+  },
+  {
     name: 'YouTube',
-    handle: '@cristinacasadomusic',
+    handle: 'Cristina Casado',
     followers: 'Official Music Videos',
     url: artistProfile.socialLinks.youtube,
     icon: YoutubeIcon,
@@ -39,7 +47,7 @@ const socialChannels = [
   },
   {
     name: 'Instagram',
-    handle: '@cristinacasadomusic',
+    handle: '@cristinaccasado',
     followers: 'Official Artist Profile',
     url: artistProfile.socialLinks.instagram,
     icon: InstagramIcon,
@@ -47,7 +55,7 @@ const socialChannels = [
   },
   {
     name: 'TikTok',
-    handle: '@cristinacasadomusic',
+    handle: '@cristinaccasado',
     followers: 'Acoustic & Studio Sessions',
     url: artistProfile.socialLinks.tiktok,
     icon: TikTokIcon,
@@ -60,6 +68,22 @@ const socialChannels = [
     url: artistProfile.socialLinks.facebook || 'https://facebook.com',
     icon: FacebookIcon,
     color: 'hover:border-[#1877f2] hover:text-[#1877f2]',
+  },
+  {
+    name: 'X',
+    handle: '@cristinaccasado',
+    followers: 'Updates & Announcements',
+    url: artistProfile.socialLinks.twitter,
+    icon: AtSign,
+    color: 'hover:border-white hover:text-white',
+  },
+  {
+    name: 'Threads',
+    handle: '@cristinaccasado',
+    followers: 'Artist Notes & Updates',
+    url: artistProfile.socialLinks.threads,
+    icon: AtSign,
+    color: 'hover:border-white hover:text-white',
   },
 ];
 

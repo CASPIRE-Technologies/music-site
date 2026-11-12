@@ -146,7 +146,7 @@ export default function EventsPage() {
         {/* Official Event Notice */}
         <div className="mt-12 p-4 rounded-2xl bg-white/[0.02] border border-white/10 text-center text-xs text-zinc-400 font-mono">
           <p>
-            OFFICIAL NOTICE: Live dates, showcases, and private listening sessions are managed in partnership with Dare Management. Click &ldquo;EVENT DETAILS&rdquo; on any date for official registration and RSVP links.
+            OFFICIAL NOTICE: Live dates, showcases, and private listening sessions are managed by Cristina Casado’s team. Click &ldquo;EVENT DETAILS&rdquo; on any date for official registration and RSVP links.
           </p>
         </div>
       </div>

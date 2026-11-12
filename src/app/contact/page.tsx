@@ -12,7 +12,6 @@ import {
   CheckCircle2,
   Send,
   Calendar,
-  Sparkles,
   ExternalLink,
 } from 'lucide-react';
 import PageHeader from '@/components/layout/PageHeader';
@@ -87,7 +86,7 @@ export default function ContactPage() {
                 MANAGEMENT DIRECTORY
               </h3>
               <p className="text-zinc-400 text-xs sm:text-sm mt-2 leading-relaxed font-light">
-                All booking and press inquiries are reviewed directly by Dare (Digital Arts Rep) Management and Cristina Casado’s team in Miami and the Dominican Republic.
+                All booking and press inquiries are reviewed directly by Cristina Casado’s team in Miami and the Dominican Republic.
               </p>
             </div>
 
@@ -106,20 +105,6 @@ export default function ContactPage() {
                   >
                     {artistProfile.management.generalEmail}
                   </a>
-                </div>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-[#121212] border border-white/10 flex items-start space-x-4">
-                <div className="w-10 h-10 rounded-full bg-[#C9A86C]/10 border border-[#C9A86C]/30 flex items-center justify-center text-[#C9A86C] shrink-0 mt-0.5">
-                  <Sparkles className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] uppercase tracking-widest text-zinc-400 font-mono block">
-                    ARTIST REPRESENTATION
-                  </span>
-                  <span className="text-white text-sm font-medium">
-                    Dare (Digital Arts Rep) Management, Miami, FL
-                  </span>
                 </div>
               </div>
 

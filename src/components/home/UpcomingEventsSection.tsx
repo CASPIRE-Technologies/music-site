@@ -170,7 +170,7 @@ export default function UpcomingEventsSection() {
         <p className="text-[11px] text-zinc-400 font-mono mt-6 flex items-center space-x-2">
           <Info className="w-3.5 h-3.5 text-[#C9A86C]" />
           <span>
-            Official Notice: Showcases, listening sessions, and live dates are presented in collaboration with Dare Management. Click &ldquo;VIEW DETAILS&rdquo; on any date for official registration and RSVP information.
+            Official Notice: Showcases, listening sessions, and live dates are presented by Cristina Casado’s team. Click &ldquo;VIEW DETAILS&rdquo; on any date for official registration and RSVP information.
           </span>
         </p>
       </div>

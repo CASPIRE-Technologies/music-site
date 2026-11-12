@@ -3,11 +3,13 @@ export type MediaType = 'ALBUM' | 'EP' | 'SINGLE';
 export interface SocialLinks {
   spotify: string;
   appleMusic: string;
+  amazonMusic?: string;
   youtube: string;
   instagram: string;
   tiktok: string;
   twitter?: string;
   facebook?: string;
+  threads?: string;
 }
 
 export interface ManagementContact {

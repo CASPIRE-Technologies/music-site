@@ -8,7 +8,6 @@ import {
   Milestone,
   Quote,
   Music2,
-  ExternalLink,
 } from 'lucide-react';
 import PageHeader from '@/components/layout/PageHeader';
 import {
@@ -19,8 +18,11 @@ import {
   originalSongsCatalog,
   blogPostsData,
 } from '@/data/artistData';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function AboutPage() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-[#080808] pb-28">
       <PageHeader
@@ -47,7 +49,7 @@ export default function AboutPage() {
             <div className="mt-6 p-6 rounded-2xl bg-[#141414] border border-white/10">
               <div className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.25em] text-[#C9A86C] font-mono mb-2">
                 <Quote className="w-4 h-4 text-[#C9A86C]" />
-                <span>Professional Statement</span>
+                <span>{t('Professional Statement')}</span>
               </div>
               <p className="font-serif italic text-sm text-zinc-300 leading-relaxed">
                 &ldquo;{artistProfile.quote}&rdquo;
@@ -61,15 +63,15 @@ export default function AboutPage() {
           <div className="lg:col-span-7 flex flex-col space-y-6">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#C9A86C] font-mono flex items-center space-x-2">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Behind the Music</span>
+              <span>{t('Behind the Music')}</span>
             </span>
             <h2 className="font-serif text-3xl sm:text-5xl font-light text-white uppercase tracking-wide">
-              DISCOVERING THE SOUND THAT RESONATES
+              {t('DISCOVERING THE SOUND THAT RESONATES')}
             </h2>
 
             <div className="space-y-4 text-zinc-300 text-sm sm:text-base font-light leading-relaxed">
               {artistProfile.bioFull.map((p, idx) => (
-                <p key={idx}>{p}</p>
+                <p key={idx}>{t(p)}</p>
               ))}
             </div>
 
@@ -77,34 +79,34 @@ export default function AboutPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10">
               <div>
                 <span className="text-[10px] font-mono uppercase text-zinc-400">
-                  GENRES
+                  {t('GENRES')}
                 </span>
                 <span className="text-xs text-white font-medium block mt-1">
-                  Pop & Latin Pop
+                  {t('Pop & Latin Pop')}
                 </span>
               </div>
               <div>
                 <span className="text-[10px] font-mono uppercase text-zinc-400">
-                  BASES
+                  {t('BASES')}
                 </span>
                 <span className="text-xs text-white font-medium block mt-1">
-                  Punta Cana & Miami
+                  {t('Punta Cana & Miami')}
                 </span>
               </div>
               <div>
                 <span className="text-[10px] font-mono uppercase text-zinc-400">
-                  INSTRUMENTS
+                  {t('INSTRUMENTS')}
                 </span>
                 <span className="text-xs text-white font-medium block mt-1">
-                  Piano, Guitar, Vocals
+                  {t('Piano, Guitar, Vocals')}
                 </span>
               </div>
               <div>
                 <span className="text-[10px] font-mono uppercase text-zinc-400">
-                  MANAGEMENT
+                  {t('MANAGEMENT')}
                 </span>
                 <span className="text-xs text-white font-medium block mt-1">
-                  Dare Management
+                  {t('Independent Artist')}
                 </span>
               </div>
             </div>
@@ -115,10 +117,10 @@ export default function AboutPage() {
         <section className="relative py-8">
           <div className="text-center mb-14">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#C9A86C] font-mono mb-2 block">
-              Respected Insights
+              {t('Respected Insights')}
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light uppercase text-white tracking-wide">
-              COMMENTS & CRITIQUES
+              {t('COMMENTS & CRITIQUES')}
             </h3>
             <p className="text-zinc-400 text-xs sm:text-sm max-w-xl mx-auto mt-3 font-light leading-relaxed">
               The buzz created by critics and shared by fans shapes her continued development as a music artist.
@@ -159,10 +161,10 @@ export default function AboutPage() {
         <section className="relative py-12">
           <div className="text-center mb-16">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#C9A86C] font-mono mb-2 block">
-              Timeline
+              {t('Timeline')}
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light uppercase text-white tracking-wide">
-              CAREER MILESTONES
+              {t('CAREER MILESTONES')}
             </h3>
             <div className="w-16 h-0.5 bg-[#C9A86C]/50 mx-auto mt-4" />
           </div>
@@ -217,10 +219,10 @@ export default function AboutPage() {
         <section className="p-8 md:p-12 rounded-3xl bg-[#121212]/70 border border-white/10 backdrop-blur-xl">
           <div className="text-center mb-10">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#C9A86C] font-mono mb-2 block">
-              Songwriting Repertoire
+              {t('Songwriting Repertoire')}
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl font-light uppercase text-white tracking-wide">
-              ORIGINAL SONGS CATALOG
+              {t('ORIGINAL SONGS CATALOG')}
             </h3>
             <p className="text-zinc-400 text-xs sm:text-sm max-w-xl mx-auto mt-2 font-light">
               From pop ballad confessions to alternative acoustic anthems, here are some of Cristina’s written and performed original tracks.
@@ -272,10 +274,10 @@ export default function AboutPage() {
         <section className="relative py-8">
           <div className="text-center mb-12">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#C9A86C] font-mono mb-2 block">
-              From the Artist Blog
+              {t('From the Artist Blog')}
             </span>
             <h3 className="font-serif text-3xl sm:text-4xl font-light uppercase text-white tracking-wide">
-              LATEST STORIES & UPDATES
+              {t('LATEST STORIES & UPDATES')}
             </h3>
           </div>
 
@@ -297,17 +299,6 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                {post.externalUrl && (
-                  <a
-                    href={post.externalUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center space-x-2 text-xs uppercase tracking-wider text-[#C9A86C] hover:text-[#DFC28D] font-mono transition-colors"
-                  >
-                    <span>Read on Official Site</span>
-                    <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                )}
               </div>
             ))}
           </div>
