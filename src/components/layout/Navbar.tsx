@@ -66,17 +66,29 @@ export default function Navbar() {
             <span className={language === 'es' ? 'text-[#C9A86C]' : ''}>ES</span>
           </button>
 
-          <Link
-            href="/"
-            className="group flex flex-col items-start focus:outline-none"
-          >
-            <span className="font-serif text-xl sm:text-2xl md:text-3xl font-light tracking-[0.2em] uppercase text-white group-hover:text-[#DFC28D] transition-colors duration-300">
-              CRISTINA CASADO
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.35em] text-[#C9A86C] font-sans -mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
-              Official Site
-            </span>
-          </Link>
+          <div className="flex flex-col items-start">
+            <Link
+              href="/"
+              className="group flex flex-col items-start focus:outline-none"
+            >
+              <span className="font-serif text-xl sm:text-2xl md:text-3xl font-light tracking-[0.2em] uppercase text-white group-hover:text-[#DFC28D] transition-colors duration-300">
+                CRISTINA CASADO
+              </span>
+              <span className="text-[9px] uppercase tracking-[0.35em] text-[#C9A86C] font-sans -mt-1 opacity-80 group-hover:opacity-100 transition-opacity">
+                Official Site
+              </span>
+            </Link>
+
+            <button
+              onClick={toggleLanguage}
+              aria-label="Change language"
+              className="lg:hidden mt-2 inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3 py-1.5 text-[10px] font-semibold tracking-[0.18em] text-zinc-300 hover:border-[#C9A86C] hover:text-[#C9A86C] transition-colors"
+            >
+              <span className={language === 'en' ? 'text-[#C9A86C]' : ''}>EN</span>
+              <span className="text-zinc-600">/</span>
+              <span className={language === 'es' ? 'text-[#C9A86C]' : ''}>ES</span>
+            </button>
+          </div>
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center space-x-8">
@@ -257,12 +269,6 @@ export default function Navbar() {
                 </a>
               </div>
 
-              <button
-                onClick={toggleLanguage}
-                className="self-center rounded-full border border-white/15 px-4 py-2 text-[10px] font-semibold tracking-[0.2em] text-zinc-300"
-              >
-                {language === 'en' ? 'ESPAÑOL' : 'ENGLISH'}
-              </button>
             </div>
           </motion.div>
         )}
