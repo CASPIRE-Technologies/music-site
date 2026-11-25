@@ -270,7 +270,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Section 7: Stories & Newsletter Updates */}
+        {/* Section 7: Stories & Newsletter Updates - */}
         <section className="relative py-8">
           <div className="text-center mb-12">
             <span className="text-[11px] uppercase tracking-[0.35em] text-[#C9A86C] font-mono mb-2 block">
