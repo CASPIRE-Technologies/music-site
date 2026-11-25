@@ -35,3 +35,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # Musicsite
+
+## Deploy on Cloudflare Pages
+
+This project is configured as a Next.js static export. In Cloudflare Pages, use:
+
+- Build command: `npm run build`
+- Build output directory: `out`
+- Node.js version: `20` or newer
+
+Cloudflare Pages must publish the `out` directory. Publishing the repository root or `public` directory will show Cloudflare's placeholder page instead of this app.
